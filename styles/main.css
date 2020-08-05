@@ -440,6 +440,65 @@ main .gallery__img__container {
   margin-top: 1rem;
 }
 
+main .gallery__img .comments {
+  margin: auto;
+}
+
+main .gallery__img .comments h2 {
+  text-align: center;
+  color: #6b5e7b;
+  font-family: "Lora", serif;
+  margin: 2rem 0;
+}
+
+main .gallery__img .comments div input {
+  border: 1px solid #666666;
+  padding: 2rem 22.2rem;
+  text-align: left;
+  border-radius: 2px;
+}
+
+main .gallery__img .comments div input ::-webkit-input-placeholder {
+  text-align: left !important;
+}
+
+main .gallery__img .comments div input :-ms-input-placeholder {
+  text-align: left !important;
+}
+
+main .gallery__img .comments div input ::-ms-input-placeholder {
+  text-align: left !important;
+}
+
+main .gallery__img .comments div input ::placeholder {
+  text-align: left !important;
+}
+
+main .gallery__img .comments .button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+main .gallery__img .comments .button div {
+  padding-right: 2rem;
+}
+
+main .gallery__img .comments .button div a {
+  color: #393e46;
+}
+
+main .gallery__img .comments .button .btn-sm {
+  margin-left: 21rem;
+  padding: 0 10rem;
+}
+
 main .gallery__img img {
   width: 13rem;
   height: 10rem;
@@ -508,6 +567,7 @@ main .gallery .card__text__flower h3 {
 
 main .gallery .card__text__flower img {
   width: 15rem;
+  height: 12.3rem !important;
 }
 
 main .gallery .card__text__flower .btn {

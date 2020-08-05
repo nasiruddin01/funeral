@@ -5,6 +5,7 @@
 @import "./animations";
 @import "./components";
 @import "./scroll";
+
 // Header css style
 header {
     position: fixed;
@@ -14,10 +15,13 @@ header {
     padding: 1rem 0;
     display: grid;
     place-items: center;
+
     @include responsive(phone) {
         padding: 0.5rem 0;
     }
+
     box-shadow: 0 2px 7px rgba(0, 0, 0, 0.2);
+
     nav {
         display: flex;
         justify-content: center;
@@ -25,31 +29,39 @@ header {
         flex-wrap: wrap;
         width: 90%;
         max-width: 1200px;
+
         @include responsive(big-desktop) {
             max-width: 1300px;
         }
+
         .logo {
             font-family: $font-secondary;
             font-size: 1.2rem;
             color: $color-primary;
             margin-right: auto;
             margin-left: 0;
+
             @include responsive(phone) {
                 width: 100%;
                 text-align: center;
             }
         }
+
         a {
             font-weight: bold;
             color: $color-text-primary;
             margin: 0 1rem;
+
             @include responsive(phone) {
                 margin: 0.5rem;
             }
+
             text-decoration: none;
+
             &.nuxt-link-exact-active {
                 color: $color-primary;
             }
+
             &:last-child {
                 margin-right: 0;
             }
@@ -62,13 +74,16 @@ main {
     margin: 0 auto;
     width: 90%;
     max-width: 1200px;
+
     @include responsive(big-desktop) {
         max-width: 1300px;
     }
+
     .profile {
         display: flex;
         flex-direction: row;
         padding-top: 5rem;
+
         &__img {
             img {
                 width: 10rem;
@@ -76,11 +91,13 @@ main {
                 margin-right: 6rem;
             }
         }
+
         &__text {
             h1 {
                 font-family: $font-secondary;
                 color: $color-secondary;
             }
+
             h3 {
                 margin-bottom: 0.5rem;
                 font-family: $font-primary;
@@ -88,6 +105,7 @@ main {
                 font-size: 0.9rem;
                 color: $color-primary;
             }
+
             p {
                 font-family: $font-primary;
                 font-size: 0.8rem;
@@ -96,56 +114,118 @@ main {
             }
         }
     }
+
     .gallery {
         display: grid;
         grid-template-columns: auto 15rem;
         grid-gap: 1rem;
+
         &__img {
             display: flex;
             flex-wrap: wrap;
             align-self: start;
             width: 100%;
+
             &__container {
                 display: flex;
                 flex-direction: row;
                 margin-top: 1rem;
             }
+
+            .comments {
+                margin: auto;
+
+                h2 {
+                    text-align: center;
+                    color: $color-secondary;
+                    font-family: $font-secondary;
+                    margin: 2rem 0;
+
+                }
+
+                div {
+                    input {
+                        border: 1px solid $color-grey-light;
+                        padding: 2rem 22.2rem;
+                        text-align: left;
+                        border-radius: 2px;
+
+                        ::placeholder {
+                            text-align: left!important;
+
+                        }
+                    }
+                }
+
+                .button {
+                    display: flex;
+                    flex-direction: row;
+                    padding-top: 1rem;
+                    margin-bottom: 2rem;
+
+                    div {
+                        padding-right: 2rem;
+
+                        a {
+                            color: $color-text-primary;
+                        }
+
+                    }
+
+                    .btn-sm {
+                        margin-left: 21rem;
+                        padding: 0 10rem;
+                    }
+                }
+            }
+
             img {
                 width: 13rem;
                 height: 10rem;
                 margin: 0.5rem;
                 border-radius: 5px;
             }
+
             &__comments {
                 margin-top: 2rem;
+
                 &__person {
                     display: flex;
                     flex-direction: row;
+
                     img {
                         width: 5rem;
                         height: 5rem;
                         border-radius: 50%;
                     }
+
                     &__name {
                         margin-top: 1.1rem;
                     }
                 }
+
                 h3 {
                     font-family: $font-secondary;
                 }
+
                 h5 {
                     font-family: $font-primary;
                     font-weight: 500;
                 }
+
                 p {
                     margin-top: 0.5rem;
                     font-family: $font-primary;
                     font-size: 0.8rem;
                 }
             }
+
+
         }
+
         .card__text {
             margin-top: 1rem;
+
             &__flower {
                 background: rgba(229, 229, 229, 0.2);
                 border: 0.5px solid rgba(57, 62, 70, 0.1);
@@ -153,19 +233,24 @@ main {
                 border-radius: 5px;
                 margin-top: 2rem;
                 text-align: center;
+
                 h3 {
                     margin: 1rem;
                     font-family: $font-secondary;
                     color: $color-secondary;
                 }
+
                 img {
                     width: 15rem;
+                    height: 12.3rem !important;
                 }
+
                 .btn {
                     margin: 1.2rem;
                     font-size: 0.6rem;
                 }
             }
+
             &__donation {
                 padding: 1.5rem;
                 text-align: center;
@@ -174,15 +259,18 @@ main {
                 box-sizing: border-box;
                 border-radius: 5px;
                 margin-bottom: 2rem;
+
                 h2 {
                     font-family: $font-secondary;
                     color: $color-secondary;
                     font-size: 22px;
                 }
+
                 h1 {
                     margin: 0.5rem 0;
                     color: $color-text-primary;
                 }
+
                 p {
                     font-size: 0.8rem;
                     padding-top: 1rem;
@@ -190,41 +278,49 @@ main {
                     color: $color-text-primary;
                     font-weight: 500;
                 }
+
                 .button {
                     margin: 1rem 0;
                 }
+
                 &__social {
                     a {
                         margin: 0 0.5rem;
                     }
                 }
             }
+
             &__flower {
                 h3 {
                     font-size: 1.35rem;
                 }
+
                 img {
                     height: 20rem;
                 }
             }
+
             &__location {
                 background: rgba(229, 229, 229, 0.2);
                 border: 0.5px solid rgba(57, 62, 70, 0.1);
                 box-sizing: border-box;
                 border-radius: 5px;
                 padding: 2rem;
+
                 &__text {
                     p {
                         font-size: 0.6rem;
                         color: $color-text-primary;
                         font-family: $font-primary;
                     }
+
                     h2 {
                         margin: 0.5rem 0;
                         font-family: $font-secondary;
                         color: $color-secondary;
                         font-size: 1.4rem;
                     }
+
                     h4 {
                         font-size: 0.75rem;
                         font-weight: 500;
@@ -232,13 +328,19 @@ main {
                         font-family: $font-primary;
                     }
                 }
+
                 &__map {
                     margin: 1rem;
                 }
+
                 .btn {
                     align-items: center;
                 }
+
+
             }
         }
+
+
     }
 }
