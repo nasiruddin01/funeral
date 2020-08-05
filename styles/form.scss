@@ -1,0 +1,264 @@
+@import "./colors";
+@import "./base";
+@import "./typograhpy";
+@import "./mixins";
+@import "./animations";
+@import "./components";
+@import "./scroll";
+
+// Header css style
+header {
+    position: fixed;
+    z-index: 10;
+    background: $color-white;
+    width: 100%;
+    padding: 1rem 0;
+    display: grid;
+    place-items: center;
+
+    @include responsive(phone) {
+        padding: 0.5rem 0;
+    }
+
+    box-shadow: 0 2px 7px rgba(0, 0, 0, 0.2);
+
+    nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 90%;
+        max-width: 1200px;
+
+        @include responsive(big-desktop) {
+            max-width: 1300px;
+        }
+
+        .logo {
+            font-family: $font-secondary;
+            font-size: 1.2rem;
+            color: $color-primary;
+            margin-right: auto;
+            margin-left: 0;
+
+            @include responsive(phone) {
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        a {
+            font-weight: bold;
+            color: $color-text-primary;
+            margin: 0 1rem;
+
+            @include responsive(phone) {
+                margin: 0.5rem;
+            }
+
+            text-decoration: none;
+
+            &.nuxt-link-exact-active {
+                color: $color-primary;
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+// main css style
+main {
+    margin: 0 auto;
+    width: 90%;
+    max-width: 1200px;
+
+    @include responsive(big-desktop) {
+        max-width: 1300px;
+    }
+
+    .container {
+        padding-top: 8rem;
+
+        &__form {
+            background: url(../assets/images/background1.svg) no-repeat center center/contain;
+            background-size: cover;
+            border: 1px solid rgba(194, 187, 187, 0.2);
+            width: 100%;
+           .array {
+                padding-left: 2rem;
+                margin-top: 2rem;
+
+            }
+
+            &__input {
+                text-align: center;
+                width: 600px;
+                margin: auto;
+
+                h1 {
+
+                    font-family: $font-secondary;
+                    color: $color-secondary;
+                    margin-top: 4rem;
+                }
+
+                p {
+                    font-family: $font-primary;
+                    font-size: 1rem;
+                    line-height: 2rem;
+                    padding: 1rem 0;
+                }
+
+                
+                .date {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    grid-gap: 2rem;
+                    width: 100%;
+                    padding: 2rem 0;
+
+
+                    &__birth {
+
+                       label {
+                            font-family: $font-secondary;
+                            color: $color-secondary;
+                            font-size: 1rem;
+                        }
+                    }
+
+                    &__death {
+
+                        label {
+                            font-family: $font-secondary;
+                            color: $color-secondary;
+                            font-size: 1rem;
+                          
+                        }
+                        .preferences {
+                            margin-bottom: 1rem;
+                        }
+                    }
+                }
+                .checkbox {
+                    margin-top: 2rem;
+                    div{
+                        margin-bottom: 0.5rem;
+                        .select{
+                            border: 1px solid rgba(0, 0, 0, 0.2);
+                           background-color: $color-grey-shadow;
+                           border-radius: 2px;
+                          
+                        }
+                        ::placeholder {
+                            color: #848080;
+                        }
+                    }
+                    
+
+                }
+
+                .btn {
+                    width: 100%;
+                    margin: auto;
+                    margin-top: 1rem;
+                    
+                }
+
+            }
+
+
+            padding-bottom: 15rem;
+        }
+
+    }
+}
+
+
+
+
+// footer css style
+footer {
+    width: 100%;
+    padding-top: 3rem;
+    background: $color-background;
+    margin-top: 3rem;
+
+    .footer {
+        width: 90%;
+        margin: auto;
+        max-width: 800px;
+        text-align: center;
+
+        &__logo {
+            font-family: $font-secondary;
+            color: $color-secondary;
+            font-size: 1.25rem;
+            margin: 0.5rem;
+        }
+
+        &__company-description {
+            font-size: 1rem;
+            line-height: 2rem;
+        }
+
+        &__social-link-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 1.5rem;
+
+            &__link {
+                width: 1.3rem;
+                margin: 0 1rem;
+
+                img {
+                    width: 100%;
+                    height: 1.3rem;
+                    opacity: 0.8;
+
+                    &:hover {
+                        opacity: 1;
+                        transform: scale(1.2);
+                        transition: all 0.3s;
+                    }
+                }
+            }
+        }
+
+        &__other-link-container {
+            margin-top: 1.5rem;
+            margin-bottom: 1.5rem;
+
+            @include responsive(greater-than-phone) {
+                max-width: 500px;
+                margin: auto;
+                display: flex;
+                justify-content: space-evenly;
+
+                a {
+                    margin: 0 1rem;
+                }
+            }
+
+            a {
+                margin: 1rem 0;
+                width: 100%;
+                color: $color-text-primary;
+            }
+        }
+    }
+
+    hr {
+        border: 1px solid rgba(57, 62, 70, 0.1);
+        width: 100%;
+    }
+
+    .copyright {
+        padding: 1rem;
+        text-align: center;
+    }
+}

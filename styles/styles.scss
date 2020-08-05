@@ -1,0 +1,341 @@
+        @import "./colors";
+        @import "./base";
+        @import "./typograhpy";
+        @import "./mixins";
+        @import "./animations";
+        @import "./components";
+        @import "./scroll";
+        // Header css style
+        header {
+            position: fixed;
+            z-index: 10;
+            background: $color-white;
+            width: 100%;
+            padding: 1rem 0;
+            display: grid;
+            place-items: center;
+            @include responsive(phone) {
+                padding: 0.5rem 0;
+            }
+            box-shadow: 0 2px 7px rgba(0, 0, 0, 0.2);
+            nav {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+                width: 90%;
+                max-width: 1200px;
+                @include responsive(big-desktop) {
+                    max-width: 1300px;
+                }
+                .logo {
+                    font-family: $font-secondary;
+                    font-size: 1.2rem;
+                    color: $color-primary;
+                    margin-right: auto;
+                    margin-left: 0;
+                    @include responsive(phone) {
+                        width: 100%;
+                        text-align: center;
+                    }
+                }
+                a {
+                    font-weight: bold;
+                    color: $color-text-primary;
+                    margin: 0 1rem;
+                    @include responsive(phone) {
+                        margin: 0.5rem;
+                    }
+                    text-decoration: none;
+                    &.nuxt-link-exact-active {
+                        color: $color-primary;
+                    }
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+        
+        // main css style
+        main {
+            padding-top: 4rem;
+            @include responsive(phone) {
+                padding-top: 6.5rem;
+            }
+            .landing {
+                background-color: #f7f7f7;
+                font-family: $font-secondary;
+                height: 730px;
+                &__content {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    margin: 0 auto;
+                    width: 90%;
+                    max-width: 1200px;
+                    @include responsive(big-desktop) {
+                        max-width: 1300px;
+                    }
+                    &__text {
+                        margin: auto 0;
+                        h1 {
+                            margin-bottom: 1rem;
+                            color: $color-primary;
+                            font-size: 2rem;
+                        }
+                        p {
+                            font-size: 1.8rem;
+                        }
+                    }
+                }
+            }
+        }
+        
+        .feature {
+            margin-top: 2rem;
+            width: 90%;
+            max-width: 1200px;
+            @include responsive(big-desktop) {
+                max-width: 1300px;
+            }
+            margin: auto;
+            text-align: center;
+            .feature__header {
+                font-family: $font-secondary;
+                color: $color-primary;
+                font-size: 1.5rem;
+                margin-bottom: 0.5rem;
+            }
+            .feature__text {
+                font-family: $font-primary;
+            }
+            .feature__card {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                padding-top: 2rem;
+                &--reverse {
+                    flex-direction: row-reverse;
+                    margin-left: 0;
+                    .feature__card__img {
+                       
+                        img {
+                            margin-right: 0!important;
+                            margin-left: 12rem;
+                        }
+                    }
+                }
+                .feature__card__img {
+                    img {
+                        width: 30rem;
+                        margin-right: 12rem;
+                        border-radius: 5px;
+                    }
+                }
+                .feature__card__text {
+                    text-align: start;
+                    h3 {
+                        font-family: $font-secondary;
+                        color: $color-secondary;
+                        font-size: 2rem;
+                    }
+                    p {
+                        margin-top: 1rem;
+                        font-family: $font-primary;
+                        color: $color-text-primary;
+                        font-size: 1.2rem;
+                        font-weight: 400;
+                    }
+                }
+            }
+        }
+        
+        .search {
+            width: 90%;
+            max-width: 1200px;
+            padding-bottom: 2rem;
+            @include responsive(big-desktop) {
+                max-width: 1300px;
+            }
+            // margin-top: 3rem;
+            margin: auto;
+            .search__text {
+                text-align: center;
+                h2 {
+                    padding-top: 3rem;
+                    margin: 1rem 0;
+                    font-family: $font-secondary;
+                }
+                p {
+                    margin-bottom: 2rem;
+                }
+            }
+            .search__btn {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 4rem;
+                .btn {
+                    border: 1px solid #000;
+                    width: 50%;
+                    div {
+                        transform: scaleX(4rem);
+                    }
+                }
+            }
+            .search__cards {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                grid-gap: 2rem;
+                margin-top: 3rem;
+                .search___card {
+
+                    border: 1px solid rgba(180, 158, 158, 0.2);
+                    border-radius: 5px;
+                    .search___card__img {
+                        margin: auto;
+                        width: 90%;
+                        img {
+                            border-radius: 5px;
+                            margin-top: 5%;
+                            width: 100%;
+                            height: 16rem;
+                        }
+                    }
+                    .search__card__text {
+                       margin: 5%;
+                        h4 {
+                            font-family: $font-secondary;
+                        }
+                        p{
+                            font-family: $font-primary;
+                        }
+                        a {
+                            font-family: $font-primary;
+                            font-weight: 400;
+                            color: $color-text-primary;
+                        }
+                    }
+                }
+                .search___card__location {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr 1fr;
+                }
+            }
+            .bottom {
+                margin-top: 4rem;
+                h2 {
+                    color: $color-text-primary;
+                    font-family: $font-secondary;
+                }
+            }
+        }
+        
+        .service {
+            padding-bottom: 5rem;
+            width: 90%;
+            max-width: 1200px;
+            @include responsive(big-desktop) {
+                max-width: 1300px;
+            }
+            margin-top: 3rem;
+            margin: auto;
+            .service__text {
+                margin-top: 4rem;
+                text-align: center;
+                h2 {
+                    margin-bottom: 1rem;
+                    color: $color-text-primary;
+                    font-family: $font-secondary;
+                }
+            }
+            .service__cards {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                .service__card {
+                    margin-top: 3rem;
+                }
+                .service__card__img {
+                    margin-top: 6rem;
+                }
+                .service__card__text {
+                    margin-top: 6rem;
+                    h2 {
+                        color: $color-primary;
+                        font-family: $font-secondary;
+                    }
+                }
+            }
+        }
+        
+        // footer css style
+        footer {
+            width: 100%;
+            padding-top: 3rem;
+            background: $color-background;
+            .footer {
+                width: 90%;
+                margin: auto;
+                max-width: 800px;
+                text-align: center;
+                &__logo {
+                    font-family: $font-secondary;
+                    color: $color-secondary;
+                    font-size: 1.25rem;
+                    margin: 0.5rem;
+                }
+                &__company-description {
+                    font-size: 1rem;
+                    line-height: 2rem;
+                }
+                &__social-link-container {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-top: 1.5rem;
+                    &__link {
+                        width: 1.3rem;
+                        margin: 0 1rem;
+                        img {
+                            width: 100%;
+                            height: 1.3rem;
+                            opacity: 0.8;
+                            &:hover {
+                                opacity: 1;
+                                transform: scale(1.2);
+                                transition: all 0.3s;
+                            }
+                        }
+                    }
+                }
+                &__other-link-container {
+                    margin-top: 1.5rem;
+                    margin-bottom: 1.5rem;
+                    @include responsive(greater-than-phone) {
+                        max-width: 500px;
+                        margin: auto;
+                        display: flex;
+                        justify-content: space-evenly;
+                       
+                        a {
+                            margin: 0 1rem;
+                        }
+                    }
+                    a {
+                        margin: 1rem 0;
+                        width: 100%;
+                        color: $color-text-primary;
+                    }
+                }
+            }
+            hr {
+                border: 1px solid rgba(57, 62, 70, 0.1);
+                width: 100%;
+            }
+            .copyright {
+                padding: 1rem;
+                text-align: center;
+            }
+        }

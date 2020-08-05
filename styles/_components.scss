@@ -1,0 +1,122 @@
+@import "./colors";
+
+.btn {
+  &,
+  &:link,
+  &:visited {
+    text-transform: capitalize;
+    text-decoration: none;
+    padding: 0.5rem 4rem;
+    display: inline-block;
+    border-radius: 0.2rem;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+
+  &:active,
+  &:focus {
+    outline: none;
+  }
+
+  &--primary {
+    border: 2px solid $color-primary;
+    color: $color-primary;
+    &:hover {
+      background-color: $color-primary;
+      color: $color-white;
+    }
+  }
+
+  &--secondary {
+    background: $color-secondary;
+    border: 2px solid $color-secondary;
+    color: $color-white;
+    &:hover,
+    &:active {
+      opacity: 0.9;
+    }
+  }
+
+  &--tertiary {
+    background-color: transparent;
+    color: $color-secondary;
+    border: 2px solid $color-secondary;
+    &:hover {
+      background-color: $color-secondary;
+      color: $color-white;
+    }
+  }
+
+  &--quanternary {
+    background: $color-primary;
+    color: $color-white;
+    border: 2px solid $color-primary;
+    &:hover,
+    &:active {
+      opacity: 0.8;
+    }
+  }
+
+  &--sm {
+    padding: 0.5rem 2rem !important;
+    font-size: 0.8rem !important;
+  }
+
+  &--xs {
+    padding: 0.3rem 1rem !important;
+    font-size: 0.8rem !important;
+    font-weight: 600;
+  }
+
+  &--round {
+    border-radius: 4rem !important;
+  }
+}
+
+input[type="text"],
+input[type="date"],
+input[type="number"],
+input[type="password"],
+input[type="email"] {
+  width: 100%;
+  padding: 0.3rem;
+  box-shadow: none;
+  border: none;
+  border-bottom: 1px solid $color-grey-shadow;
+  font-weight: 400;
+  font-size: 1rem;
+  font-family: inherit;
+  line-height: 1.8rem;
+
+  &:focus {
+    border-bottom: 1px solid $color-text-primary;
+    outline: none;
+  }
+
+  &::-webkit-input-placeholder {
+    color: #d3cfd7;
+  }
+}
+
+textarea {
+  width: 100%;
+  height: 6rem;
+  padding: 0.3rem 0;
+  font-size: 1rem;
+  font-family: inherit;
+  border: none;
+  border-bottom: 1px solid $color-grey-shadow;
+  resize: vertical;
+  line-height: 1.8rem;
+
+  &:focus {
+    outline: none;
+    border-bottom: 1px solid $color-text-primary;
+  }
+
+  &::-webkit-input-placeholder {
+    color: #d3cfd7;
+  }
+}
